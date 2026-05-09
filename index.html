@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrepOral</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="/" data-link>PrepOral</a>
+      <div class="links">
+        <a href="/anglais" data-link>Anglais</a>
+        <a href="/personnalite" data-link>Personnalité</a>
+        <a href="/psychotechniques" data-link>Psychotechniques</a>
+        <a href="/tarifs" data-link>Tarifs</a>
+        <a href="/espace" data-link>Mon espace</a>
+      </div>
+      <button class="burger" id="burger">☰</button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="/" data-link>Accueil</a>
+      <a href="/anglais" data-link>Anglais</a>
+      <a href="/personnalite" data-link>Entretien de personnalité</a>
+      <a href="/psychotechniques" data-link>Tests psychotechniques</a>
+      <a href="/tarifs" data-link>Tarifs</a>
+      <a href="/espace" data-link>Mon espace</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="page active">
+      <div class="hero">
+        <div class="hero-inner">
+          <div>
+            <div class="kicker"><span>Concours</span><span>Prépa HEC</span><span>IA orale</span></div>
+            <h1 class="h1">Prépare tes oraux et convertis !</h1>
+            <p class="lead">Anglais, entretiens de personnalité, tests psychotechniques : entraîne-toi en conditions concours avec des jurys IA et des feedbacks détaillés.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
+              <a class="btn" href="/connexion" data-link>Commencer avec 1 oral gratuit</a>
+              <a class="btn secondary" href="/anglais" data-link>Découvrir les modules</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="newspaper">ÉDITION ORAUX</div>
+            <p><strong>À la une.</strong> Les oraux ne se préparent pas seulement avec des fiches : ils se gagnent par répétition, relance, feedback et progression.</p>
+            <div class="grid3" style="margin-top:18px">
+              <div><strong>6</strong><br><span class="muted small">écoles anglais</span></div>
+              <div><strong>3</strong><br><span class="muted small">modules</span></div>
+              <div><strong>1</strong><br><span class="muted small">oral offert</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <section class="split">
+          <div><h2 class="section-title">Pourquoi PrepOral ?</h2></div>
+          <div class="section-lead">
+            <p><strong>Parce qu’on ne progresse pas avec des fiches, mais avec des passages répétés.</strong></p>
+            <p>PrepOral te met en conditions réelles : tu passes l’oral, tu te confrontes aux relances, puis tu reçois un feedback clair sur ce qui doit changer.</p>
+            <p>Chaque école a ses propres attendus, ses formats, ses pièges et ses spécificités. Avec PrepOral, tu t’entraînes sur des formats adaptés à chaque école.</p>
+          </div>
+        </section>
+
+        <section style="margin-top:64px">
+          <h2 class="section-title">Les 3 entraînements</h2>
+          <div class="grid3">
+            <a class="card" href="/anglais" data-link><h3>Anglais</h3><div class="sub">6 écoles</div><p>Textes, timer de préparation, résumé, commentaire et questions de jury selon les formats HEC, ESSEC, ESCP, EDHEC, EM Lyon et SKEMA.</p><button class="btn secondary">Découvrir l’anglais</button></a>
+            <a class="card" href="/personnalite" data-link><h3>Entretien de personnalité</h3><div class="sub">ESSEC, ESCP, EMLyon</div><p>Des simulations avec un jury IA exigeant, adaptées aux attentes de chaque école.</p><button class="btn secondary">Découvrir les entretiens</button></a>
+            <a class="card" href="/psychotechniques" data-link><h3>Tests psychotechniques</h3><div class="sub">Entraînement ciblé</div><p>Cours, exercices chronométrés, correction et progression pour automatiser les bons réflexes.</p><button class="btn secondary">Découvrir les tests</button></a>
+          </div>
+        </section>
+
+        <section style="margin-top:64px">
+          <h2 class="section-title">Comment ça marche</h2>
+          <div class="steps">
+            <div class="card"><div class="step-num">1</div><h3>Choisis</h3><p>Anglais, personnalité ou psychotechniques.</p></div>
+            <div class="card"><div class="step-num">2</div><h3>Passe</h3><p>Timer, jury IA, relances, questions et exercice chronométré.</p></div>
+            <div class="card"><div class="step-num">3</div><h3>Reçois</h3><p>Un feedback détaillé avec points forts et axes de travail.</p></div>
+            <div class="card"><div class="step-num">4</div><h3>Progresse</h3><p>Ton espace garde tes notes, fautes et historiques.</p></div>
+          </div>
+        </section>
+
+        <section class="split" style="margin-top:64px">
+          <div><h2 class="section-title">Un feedback qui ressemble à un vrai retour de jury.</h2><p class="section-lead">Exemple inspiré d’un feedback ESCP.</p></div>
+          <div class="feedback-demo">
+            <h4>Diagnostic</h4><p>Votre réponse montre une envie réelle d’intégrer l’ESCP, mais le lien entre votre personnalité, votre projet professionnel et l’école reste encore trop implicite.</p>
+            <h4>Recommandations</h4><p>Vous devez créer un triangle clair : ce que vous êtes, ce que vous voulez construire, et ce que l’ESCP vous apporte précisément. Par exemple, expliquez que la Blue Factory est l’incubateur de l’ESCP et reliez-la à une initiative concrète.</p>
+          </div>
+        </section>
+
+        <section style="margin-top:64px" class="split">
+          <div class="panel"><h2 class="section-title">Ton espace de progression</h2><p class="section-lead">Crédits, historique, notes, erreurs récurrentes en anglais, feedbacks complets : tout est centralisé.</p><a class="btn" href="/espace" data-link>Voir mon espace</a></div>
+          <div class="chart"><div class="bar" style="height:30%"></div><div class="bar" style="height:45%"></div><div class="bar" style="height:50%"></div><div class="bar" style="height:62%"></div><div class="bar" style="height:78%"></div></div>
+        </section>
+
+        <section style="margin-top:64px" class="panel">
+          <h2 class="section-title">Tarifs simples</h2>
+          <p class="section-lead">1 oral gratuit à l’inscription. Puis des packs selon ton rythme d’entraînement.</p>
+          <a class="btn" href="/tarifs" data-link>Voir les tarifs</a>
+        </section>
+
+        <section style="margin-top:64px;text-align:center">
+          <h2 class="section-title">Le jour J, tu ne dois pas découvrir l’oral. Tu dois le reconnaître.</h2>
+          <a class="btn" href="/connexion" data-link>Créer mon compte gratuit</a>
+        </section>
+      </div>
+    </section>
+
+    <section id="anglais" class="page"><div class="wrap"><h1 class="section-title">Anglais</h1><p class="section-lead">6 écoles. Textes, timer, sujet ou question selon les formats.</p><div id="englishApp"></div></div></section>
+    <section id="personnalite" class="page"><div class="wrap"><h1 class="section-title">Entretien de personnalité</h1><p class="section-lead">ESSEC, ESCP, EM Lyon. Choisis ton école, comprends le format, lance l’entretien.</p><div id="personalityApp"></div></div></section>
+    <section id="psychotechniques" class="page"><div class="wrap"><h1 class="section-title">Tests psychotechniques</h1><p class="section-lead">Chapitre 1 gratuit avec compte. Le reste est visible mais verrouillé.</p><div id="psychoApp"></div></div></section>
+    <section id="tarifs" class="page"><div class="wrap"><h1 class="section-title">Tarifs</h1><div id="pricingApp"></div></div></section>
+    <section id="connexion" class="page"><div class="wrap"><h1 class="section-title">Connexion</h1><div id="authApp"></div></div></section>
+    <section id="espace" class="page"><div class="wrap"><h1 class="section-title">Mon espace</h1><div id="dashboardApp"></div></div></section>
+    <section id="admin" class="page"><div class="wrap"><h1 class="section-title">Admin</h1><div id="adminApp"></div></div></section>
+    <section id="feedback" class="page"><div class="wrap"><div id="feedbackApp"></div></div></section>
+  </main>
+
+  <div class="modal" id="modal"><div class="modal-card"><h2 id="modalTitle" class="serif"></h2><p id="modalText"></p><div id="modalActions" style="display:flex;gap:10px;flex-wrap:wrap"></div></div></div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
